@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-const Nav = ({ schoolCount, studentCount, path }) => {
+export const Nav = ({ schoolCount, studentCount, path }) => {
 
   // displays "active" button based on current URL path
   const selected = (selectedPath, path) => {

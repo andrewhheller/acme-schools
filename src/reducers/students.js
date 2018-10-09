@@ -110,6 +110,10 @@ const studentsReducer = (state = [], action) => {
 
 export {
   studentsReducer,
+  _loadStudents,
+  _createStudent,
+  _updateStudent,
+  _deleteStudent,
   loadStudents,
   createStudent,
   deleteStudent,

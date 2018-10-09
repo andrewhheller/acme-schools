@@ -38,7 +38,7 @@ const _updateSchool = school => {
 // thunks
 const loadSchools = () => {
   return (dispatch) => {
-    axios.get('/api/schools')
+    return axios.get('/api/schools')
       .then(response => response.data)
       .then(schools => dispatch(_loadSchools(schools)))
       .catch(error => console.log(error))
@@ -108,9 +108,13 @@ const schoolsReducer = (state = [], action) => {
 
 export {
   schoolsReducer,
+  _loadSchools,
   loadSchools,
+  _createSchool,
   createSchool,
+  _deleteSchool,
   DELETE_SCHOOL,
   deleteSchool,
-  updateSchool
+  updateSchool,
+  _updateSchool
 }
